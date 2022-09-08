@@ -25,9 +25,17 @@ All code contains clearly commented instructions that you can easily follow.
 
 ## Screenshots
 
+Annotating images by drawing boundaries of each object of interest (masks):
 <img width="354" alt="Screen Shot 2022-09-02 at 10 54 03 AM" src="https://user-images.githubusercontent.com/63888029/189072054-734d97ed-2d32-4df2-bb9e-79ac53df4577.png">
 
+(training process)
 <img width="1004" alt="demo_training" src="https://user-images.githubusercontent.com/63888029/189071949-7c18f3b8-46be-4110-b8ce-e69c011e5a05.png">
 
-
+(Demo of result)
 <img width="1032" alt="demo_result" src="https://user-images.githubusercontent.com/63888029/189071997-3e1956a0-e3da-4447-9e2e-4874341c9886.png">
+
+## Results
+<img width="544" alt="Screen Shot 2022-09-08 at 1 32 50 AM" src="https://user-images.githubusercontent.com/63888029/189075265-2d3103dc-57cd-475e-9c42-bbed3cac0c7f.png">
+
+<img width="570" alt="best" src="https://user-images.githubusercontent.com/63888029/189075449-25fae0f2-79e5-486d-8d56-c400841c0023.png">
+
