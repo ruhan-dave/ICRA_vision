@@ -25,7 +25,9 @@ All code contains clearly commented instructions that you can easily follow.
 
 ## Screenshots
 
-![]("https://github.com/ruhan-dave/ICRA_vision/blob/main/demo_annotation.png")
-![]("https://github.com/ruhan-dave/ICRA_vision/blob/main/demo_training.png")
-![]("https://github.com/ruhan-dave/ICRA_vision/blob/main/demo_result.png")
+<img width="354" alt="Screen Shot 2022-09-02 at 10 54 03 AM" src="https://user-images.githubusercontent.com/63888029/189072054-734d97ed-2d32-4df2-bb9e-79ac53df4577.png">
 
+<img width="1004" alt="demo_training" src="https://user-images.githubusercontent.com/63888029/189071949-7c18f3b8-46be-4110-b8ce-e69c011e5a05.png">
+
+
+<img width="1032" alt="demo_result" src="https://user-images.githubusercontent.com/63888029/189071997-3e1956a0-e3da-4447-9e2e-4874341c9886.png">
