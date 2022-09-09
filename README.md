@@ -9,10 +9,26 @@
 
 1. You will need a Colab Pro subscription to access Google's GPU. 
 2. To annotate images and create the image files required for the model training process, you will need to log in to your Roboflow Account, select the relevant project, and annotate.
+ 
+## Documentation of Project Workflow
 
-## Deployment
+1. You will need to log into Roboflow.
+`login`
+<img width="1411" alt="Screen Shot 2022-09-09 at 3 33 25 PM" src="https://user-images.githubusercontent.com/63888029/189458016-fe5cb3f1-2f7a-4c82-a1a2-3f01cc05ce5d.png">
+<img width="1403" alt="Screen Shot 2022-09-09 at 3 33 41 PM" src="https://user-images.githubusercontent.com/63888029/189458027-98454317-ae1d-44ce-ac49-89a3bb008b87.png">
+<img width="1415" alt="Screen Shot 2022-09-09 at 3 33 58 PM" src="https://user-images.githubusercontent.com/63888029/189458036-cdab08da-2563-45c7-864a-10057b1b7bac.png">
+<img width="1427" alt="Screen Shot 2022-09-09 at 3 35 02 PM" src="https://user-images.githubusercontent.com/63888029/189458482-f7e61407-70f4-4d95-9896-f2101dce4feb.png">
+<img width="1075" alt="Screen Shot 2022-09-09 at 3 35 44 PM" src="https://user-images.githubusercontent.com/63888029/189458487-3202a973-a15f-4db1-b7f4-132e17e45c9b.png">
+<img width="1308" alt="Screen Shot 2022-09-09 at 3 36 24 PM" src="https://user-images.githubusercontent.com/63888029/189458506-b152ed49-1fff-4620-a329-d43905fc6dfc.png">
+<img width="1416" alt="Screen Shot 2022-09-09 at 3 36 44 PM" src="https://user-images.githubusercontent.com/63888029/189458512-3154bfa6-a22a-4234-a679-675a1f7fc0fc.png">
+<img width="859" alt="Screen Shot 2022-09-09 at 3 37 19 PM" src="https://user-images.githubusercontent.com/63888029/189458516-3b4fd658-6ffb-466d-8977-5f1159bc43dc.png">
+<img width="388" alt="Screen Shot 2022-09-09 at 3 37 25 PM" src="https://user-images.githubusercontent.com/63888029/189458532-9a6d5038-c5e1-4f46-bbcb-a746ef151eb4.png">
 
-This project is in progress, as newer versions will be created. 
+2. Select the method.
+
+3. Anotate images using the guideline below:
+
+4. 
 
 ## Run Locally
 
@@ -22,12 +38,17 @@ To run this project, you will need to access and run the
 If you need to train a model from scratch, you will need to run the `!{command}` line in the colab notebook. 
 All code contains clearly commented instructions that you can easily follow.
 
-
 ## Screenshots
 
 Annotating images by drawing boundaries of each object of interest (masks):
 
 <img width="354" alt="Screen Shot 2022-09-02 at 10 54 03 AM" src="https://user-images.githubusercontent.com/63888029/189072054-734d97ed-2d32-4df2-bb9e-79ac53df4577.png">
+
+## Model Used and Output
+
+The model I used was a pre-trained model from the TensorFlow Library Object Detection API model zoo (mask-rcnn). This model is not the fastest or the most accurate. However, it is the only model that allows for drawing boundary masks over the objects. Essentially, it outputs the class (0 or 1) for every pixel in each given image.
+
+Then, the number of flowers is nothing but the total number of masks drawn over groups of pixels that are identified as 1 (the flower). 
 
 training process:
 
@@ -43,3 +64,21 @@ Demo of results:
 
 <img width="570" alt="best" src="https://user-images.githubusercontent.com/63888029/189075449-25fae0f2-79e5-486d-8d56-c400841c0023.png">
 
+## Metrics Used
+
+The metrics used were: accuracy, precision, recall, and F-1 score. One note is that for precision (measuring % of model-predicted positives were actually positives), the number is almost always 1 (the highest possible value). The reason for that is, we are more interested in the postives (not the negatives, which could be defined as the background or the cameraman's feet or perhaps a rock or a sign?) Meanwhile, recall is actually what we care about the most, since it measures the percentage of correctly identified flowers. I also included F-1 for completion. 
+
+## Recommendations for Further Model Improvement
+
+To improve the accurareliability, I recommend doing the same as I had done: selecting a variety of images with flowers of different shapes, sizes, color saturations, brightness, etc. This ensures a diverse image dataset to train the model with.
+
+Meanwhile, another tip that can help a lot:
+Select images with flowers overlapping each other or have a good amount of flowers around the corners of the image (please annotate them, even if these flowers may be partially cut off)
+
+This tip above will help eliminate some of the false negatives that the model failed to identify as positive.
+
+## Deployment
+
+This project is in progress, as newer versions will be created. 
+
+Suggestion is to deploy it on Amazon AWS Sagemaker to ensure scalability and use across the internet.
