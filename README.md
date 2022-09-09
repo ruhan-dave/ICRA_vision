@@ -36,7 +36,7 @@ And contains all the json files and image files for both the `train` and the `te
 ## Run Locally
 
 To run this project, you will need to access and run the 
-`icra_TFOD_Segmentation.ipynb` which contains all the relevant code for inferencing.
+`ICRA_TFOD_Segmentation.ipynb` which contains all the relevant code for inferencing.
 
 If you need to train a model from scratch, you will need to run the `!{command}` line in the colab notebook. 
 All code contains clearly commented instructions that you can easily follow.
