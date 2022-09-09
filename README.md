@@ -15,20 +15,23 @@
 1. You will need to log into Roboflow.
 `login`
 <img width="1411" alt="Screen Shot 2022-09-09 at 3 33 25 PM" src="https://user-images.githubusercontent.com/63888029/189458016-fe5cb3f1-2f7a-4c82-a1a2-3f01cc05ce5d.png">
+`go to the project called improve`
 <img width="1403" alt="Screen Shot 2022-09-09 at 3 33 41 PM" src="https://user-images.githubusercontent.com/63888029/189458027-98454317-ae1d-44ce-ac49-89a3bb008b87.png">
+`upload images`
 <img width="1415" alt="Screen Shot 2022-09-09 at 3 33 58 PM" src="https://user-images.githubusercontent.com/63888029/189458036-cdab08da-2563-45c7-864a-10057b1b7bac.png">
+`annotate in the annotation tool box`
 <img width="1427" alt="Screen Shot 2022-09-09 at 3 35 02 PM" src="https://user-images.githubusercontent.com/63888029/189458482-f7e61407-70f4-4d95-9896-f2101dce4feb.png">
+`select the Polygon option (3rd), and then zoom in to annotate`
 <img width="1075" alt="Screen Shot 2022-09-09 at 3 35 44 PM" src="https://user-images.githubusercontent.com/63888029/189458487-3202a973-a15f-4db1-b7f4-132e17e45c9b.png">
+`click "generate" in the left menu bar, then choose the data augmentations`
 <img width="1308" alt="Screen Shot 2022-09-09 at 3 36 24 PM" src="https://user-images.githubusercontent.com/63888029/189458506-b152ed49-1fff-4620-a329-d43905fc6dfc.png">
+`click "generate"`
 <img width="1416" alt="Screen Shot 2022-09-09 at 3 36 44 PM" src="https://user-images.githubusercontent.com/63888029/189458512-3154bfa6-a22a-4234-a679-675a1f7fc0fc.png">
+`Select "COCO" format and then choose to download to computer (your own computer)`
 <img width="859" alt="Screen Shot 2022-09-09 at 3 37 19 PM" src="https://user-images.githubusercontent.com/63888029/189458516-3b4fd658-6ffb-466d-8977-5f1159bc43dc.png">
+`It will be downloaded as a zip file`
+And contains all the json files and image files for both the `train` and the `test` sets. Please follow the notebook guideline closely.
 <img width="388" alt="Screen Shot 2022-09-09 at 3 37 25 PM" src="https://user-images.githubusercontent.com/63888029/189458532-9a6d5038-c5e1-4f46-bbcb-a746ef151eb4.png">
-
-2. Select the method.
-
-3. Anotate images using the guideline below:
-
-4. 
 
 ## Run Locally
 
