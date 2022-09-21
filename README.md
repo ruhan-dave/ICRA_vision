@@ -38,6 +38,8 @@ And contains all the json files and image files for both the `train` and the `te
 To run this project, you will need to access and run the 
 `ICRA_TFOD_Segmentation.ipynb` which contains all the relevant code for inferencing.
 
+After access to this file, you will require the files I have sent privately (pipeline.config and image files, etc).
+
 If you need to train a model from scratch, you will need to run the `!{command}` line in the colab notebook. 
 All code contains clearly commented instructions that you can easily follow.
 
@@ -51,7 +53,7 @@ Annotating images by drawing boundaries of each object of interest (masks):
 
 The model I used was a pre-trained model from the TensorFlow Library Object Detection API model zoo (Mask R-CNN Inception ResNet V2 1024x1024) from the  [tensorflow model zoo] (https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md). This model is one of the slowest models in the entire faily but is one of the more accurate models. The reason why this model was picked was that it is the only one that could ouput masks. However, it is the only model that allows for drawing boundary masks over the objects.
 
-From the Tensorflow Model Zoo:
+### From the Tensorflow Model Zoo:
 
 | Model         | Name                         | Speed (ms)|  COCO mAP  |     Outputs    |
 | ------------- |:----------------------------:| ---------:| ----------:| --------------:|
