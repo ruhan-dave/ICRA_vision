@@ -49,11 +49,17 @@ Annotating images by drawing boundaries of each object of interest (masks):
 
 ## Model Used and Output
 
-The model I used was a pre-trained model from the TensorFlow Library Object Detection API model zoo (mask-rcnn). This model is not the fastest or the most accurate. However, it is the only model that allows for drawing boundary masks over the objects. Essentially, it outputs the class (0 or 1) for every pixel in each given image.
+The model I used was a pre-trained model from the TensorFlow Library Object Detection API model zoo (Mask R-CNN Inception ResNet V2 1024x1024) from the  [tensorflow model zoo] (https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md). This model is one of the slowest models in the entire faily but is one of the more accurate models. The reason why this model was picked was that it is the only one that could ouput masks. However, it is the only model that allows for drawing boundary masks over the objects.
 
-Then, the number of flowers is nothing but the total number of masks drawn over groups of pixels that are identified as 1 (the flower). 
+From the Tensorflow Model Zoo:
 
-training process:
+| Model         | Name          | Speed (ms)|  COCO mAP  |   Outputs     |
+| ------------- |:-------------:| -----:    | ------: | ------: | -----: |
+| Mask R-CNN      | Inception ResNet V2 1024x1024|   301   |   39.0/34.6     |   Boxes/Masks   |  
+
+There are 2 classes associated: 0 or 1, which makes this problem akin to binary classification. 0 means the background and 1 the agricultural produce (flower). This classification is applied to every pixel of the image, and those identifiedas 1 would have a mask drawn over. Thus, the number of flowers is nothing but the total number of masks drawn over all groups of pixels identified as 1 or the flower. 
+
+Training process:
 
 <img width="1004" alt="demo_training" src="https://user-images.githubusercontent.com/63888029/189071949-7c18f3b8-46be-4110-b8ce-e69c011e5a05.png">
 
