@@ -53,9 +53,9 @@ The model I used was a pre-trained model from the TensorFlow Library Object Dete
 
 From the Tensorflow Model Zoo:
 
-| Model         | Name          | Speed (ms)|  COCO mAP  |   Outputs     |
-| ------------- |:-------------:| ---------:| ---------: | ------: | -----: |
-| Mask R-CNN    | Inception ResNet V2 1024x1024|   301   |   39.0/34.6     |   Boxes/Masks   |  
+| Model         | Name                         | Speed (ms)|  COCO mAP  |     Outputs    |
+| ------------- |:----------------------------:| ---------:| ----------:| --------------:|
+| Mask R-CNN    | Inception ResNet V2 1024x1024|    301    |  39.0/34.6 |   Boxes/Masks  |  
 
 There are 2 classes associated: 0 or 1, which makes this problem akin to binary classification. 0 means the background and 1 the agricultural produce (flower). This classification is applied to every pixel of the image, and those identifiedas 1 would have a mask drawn over. Thus, the number of flowers is nothing but the total number of masks drawn over all groups of pixels identified as 1 or the flower. 
 
